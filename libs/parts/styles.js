@@ -30,11 +30,11 @@ export default StyleSheet.create({
   keyboardViewItem           : {
     alignItems      : 'center',
     justifyContent  : 'center',
-    height          : 75,
-    width           : 75,
-    marginHorizontal: 20,
+    height          : 50,
+    width           : 50,
+    marginHorizontal: 10,
     marginVertical  : 5,
-    borderRadius    : 75 / 2,
+    borderRadius    : 50 / 2,
   },
   keyboardViewItemText       : {
     fontSize  : 22,
