@@ -41,11 +41,11 @@ export default StyleSheet.create({
   keyboardViewItemResponsive           : {
     alignItems      : 'center',
     justifyContent  : 'center',
-    height          : Math.floor(win.width / 10),
-    width           : Math.floor(win.width / 10),
+    height          : Math.floor(win.height / 12),
+    width           : Math.floor(win.height / 12),
     marginHorizontal: 10,
     marginVertical  : 5,
-    borderRadius    : Math.floor(win.width / 10) / 2,
+    borderRadius    : Math.floor(win.height / 12) / 2,
   },
   keyboardViewItemText       : {
     fontSize  : 18,
