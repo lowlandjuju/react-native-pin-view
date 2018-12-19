@@ -1,4 +1,6 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
+
+const win = Dimensions.get('window');
 
 export default StyleSheet.create({
   //passwordInputView
@@ -35,6 +37,15 @@ export default StyleSheet.create({
     marginHorizontal: 10,
     marginVertical  : 5,
     borderRadius    : 50 / 2,
+  },
+  keyboardViewItemResponsive           : {
+    alignItems      : 'center',
+    justifyContent  : 'center',
+    height          : Math.floor(win.width / 10),
+    width           : Math.floor(win.width / 10),
+    marginHorizontal: 10,
+    marginVertical  : 5,
+    borderRadius    : Math.floor(win.width / 10) / 2,
   },
   keyboardViewItemText       : {
     fontSize  : 18,

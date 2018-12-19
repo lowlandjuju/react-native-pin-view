@@ -78,7 +78,7 @@ class PinView extends React.Component {
   };
 
   render() {
-    const { pinLength, buttonTextColor, returnType, buttonBgColor, inputBgColor, onComplete, disabled, inputActiveBgColor, inputBgOpacity, deleteText } = this.props;
+    const { pinLength, buttonTextColor, returnType, buttonBgColor, inputBgColor, onComplete, disabled, inputActiveBgColor, inputBgOpacity, deleteText, responsive } = this.props;
     return (
         <View pointerEvents={disabled ? "none" : undefined}>
           <InputView
@@ -92,7 +92,7 @@ class PinView extends React.Component {
           />
           <View style={Styles.keyboardView}>
             <KeyboardView
-                styles={[Styles.keyboardViewItem, Styles.keyboardViewItemText]}
+                styles={[responsive ? Styles.keyboardViewItemResponsive : Styles.keyboardViewItem, Styles.keyboardViewItemText]}
                 bgColor={buttonBgColor}
                 textColor={buttonTextColor}
                 animatedDeleteButton={this.state.animatedDeleteButton}
@@ -132,6 +132,7 @@ PinView.propTypes = {
   onComplete: PropTypes.func.isRequired,
   pinLength: PropTypes.number.isRequired,
   clear: PropTypes.bool,
+  responsive: PropTypes.bool,
 };
 
 export default PinView
